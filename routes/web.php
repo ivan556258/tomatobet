@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\V1\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PostController::class, 'posts'])->name('posts');
+Route::get('/post/{id}', [PostController::class, 'post'])->where('id', '[0-9]+')->name('post');
+Route::get('/typeSport/{urn}', [PostController::class, 'typeSport'])->name('typeSport');
