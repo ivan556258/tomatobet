@@ -1,6 +1,5 @@
 <?php
-print_r(545);
-die();
+
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
