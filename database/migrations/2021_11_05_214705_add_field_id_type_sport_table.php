@@ -14,8 +14,8 @@ class AddFieldIdTypeSportTable extends Migration
     public function up()
     {
         Schema::table('posts', function($table) {
-            $table->integer('type_sport_id')->nullable(false)->unsigned()->after('id');
-            $table->foreign('type_sport_id','posts')->references('id')->on('type_sport')->onUpdate('CASCADE')->onDelete('CASCADE');
+            $table->integer('id_type_sport')->nullable(false)->unsigned()->after('id');
+            $table->foreign('id_type_sport','posts')->references('id')->on('type_sport')->onUpdate('CASCADE')->onDelete('CASCADE');
         });
     }
 
