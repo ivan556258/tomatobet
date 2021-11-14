@@ -30,7 +30,7 @@ class BlogSeeder extends Seeder
                 'threeHashTag' => Str::random(6), 
                 'fooHashTag' => Str::random(7), 
                 'fiveHashTag' => Str::random(8),
-                'id_type_sport' => random_int(1, 5)
+                'type_sport_id' => random_int(1, 5)
             ]);
         }
        // DB::table('blogs')->insert($arr);
