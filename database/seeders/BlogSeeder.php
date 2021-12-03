@@ -16,23 +16,26 @@ class BlogSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 10000; $i++) { 
+        
             DB::table('posts')->insert([
-                'titleText' => Str::random(17),
-                'h1Text' => Str::random(5).' '.Str::random(10),
-                'keywordsText' => Str::random(50),
-                'prevText' => Str::random(50).' '. Str::random(50),
-                'DescText' => Str::random(10).' '.Str::random(100).' '.Str::random(900),
-                'smallPicture' => "https://sun7-9.userapi.com/s/v1/ig2/BO3i2xqa8zWecGotTBoybzheKKQV0j4Qb8IO-GgPde2OxQMFsSG97K17A8eamGlh0NtDJzBBFdkIwpUUecSrBLRr.jpg?size=200x200&quality=96&crop=215,26,369,369&ava=1",
-                'bigPicture' => "https://sun9-52.userapi.com/impg/94sjvzQCgjNKQ3XjyZvT7qUs9_wMuJvchvsmDA/EJd8jjeTJ9I.jpg?size=800x421&quality=96&sign=b4c6d3d629eba32af84645efbf60ca35&type=album",
-                'oneHashTag' => Str::random(4), 
-                'twoHashTag' => Str::random(5), 
-                'threeHashTag' => Str::random(6), 
-                'fooHashTag' => Str::random(7), 
-                'fiveHashTag' => Str::random(8),
-                'type_sport_id' => random_int(1, 5)
+                'titleText' => "Бой Деррик Льюис (США) vs Кристофер Даукаус (США) ",
+                'h1Text' => "Бой Деррик Льюис (США) vs Кристофер Даукаус (США) ",
+                'keywordsText' => "MMA, M-1, Бои без правил, ставки на спорт",
+                'prevText' => "В настоящее время Даукаус (12-3) выиграл все четыре своих боя в UFC нокаутом техническим нокаутом, и только его последний соперник, Шамиль Абдурахимов прошел первый раунд.",
+                'DescText' => "<p>Льюис (25-8, 1 NC) тяжеловес 4-ый в мировом рейтинге</p>
+<h2>MMA Fighting</h2>
+<p>и сейчас надеется оправиться от потери временного титульного боя от Сирил Гейн в августе этого года на турнире UFC 265 До этого Льюис выиграл четыре боя подряд, и теперь ему поручено передать Даукаусу его первое поражение в UFC.</p>
+<p>В настоящее время Даукаус (12-3) выиграл все четыре своих <mark>боя в UFC</mark> нокаутом техническим нокаутом, и только его последний соперник, Шамиль Абдурахимов прошел первый раунд.</p>
+<p>На плакате не изображены 15 лучших полусредневесов Стивен Вандербой Томпсон и Белал Мухаммед которые, как ожидается, встретятся в со-главном турнире.</p>",
+                'smallPicture' => "https://sun9-87.userapi.com/impg/beV_iNTDyzEF_VG9KdT2D2RUzd6hEq1OosqLfQ/D2akXDIfKzk.jpg?size=604x377&quality=95&sign=60b2d789669fbdb3d0189110a45fb045&amp;type=album",
+                'bigPicture' => "https://sun9-87.userapi.com/impg/beV_iNTDyzEF_VG9KdT2D2RUzd6hEq1OosqLfQ/D2akXDIfKzk.jpg?size=604x377&quality=95&sign=60b2d789669fbdb3d0189110a45fb045&amp;type=album",
+                'oneHashTag' =>"MMA" , 
+                'twoHashTag' => "M-1", 
+                'threeHashTag' => "Бой в клетке", 
+                'fooHashTag' => "Деррик Льюис", 
+                'fiveHashTag' => "Кристофер Даукаус",
+                'type_sport_id' => "3"
             ]);
         }
        // DB::table('blogs')->insert($arr);
-    }
 }

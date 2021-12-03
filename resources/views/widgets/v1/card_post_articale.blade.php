@@ -16,7 +16,7 @@
         </div>
       <div class="col-12">
         <picture>
-          <source media="(max-width: 799px)" srcset="https://sun9-23.userapi.com/impg/jXmhcrdF9HDIUfvlJxku74-G52X2AkxOXbQbsg/nQXBBhjF1Hc.jpg?size=200x250&quality=95&sign=42b8e76921e5cbcee16738a79c7253c0&type=album">
+          <source media="(max-width: 799px)" srcset="{{$post->bigPicture}}">
           <source media="(min-width: 800px)" srcset="{{$post->bigPicture}}">
           <img src="{{$post->bigPicture}}" alt="{{$post->h1Text}}">
         </picture>
@@ -27,11 +27,11 @@
         <h1 class="display-4">{{$post->h1Text}}</h1>
       </div>
       <div class="col-12">
-        <p class="text-left text-break">{{$post->DescText}}</p>
+        <p class="text-left text-break">{!!$post->DescText!!}</p>
 
       </div>
     <div class="col-12">
-{{--      <span class="badge bg-primary">{{$post->1hashTag}}</span>
+    {{--  <span class="badge bg-primary">{{$post->1hashTag}}</span>
       <span class="badge bg-success">{{$post->2hashTag}}</span>
       <span class="badge bg-danger">{{$post->3hashTag}}</span>
       <span class="badge bg-warning text-dark">{{$post->4hashTag}}</span>

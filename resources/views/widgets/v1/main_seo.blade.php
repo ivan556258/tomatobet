@@ -1,7 +1,7 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="manifest" href="/android/webmanifest.json" crossorigin="use-credentials">
 <meta property="og:locale" content="ru_RU"/>
-<meta property="og:site_name" content="legalbet.ru"/>
+<meta property="og:site_name" content="tomatobet.ru"/>
 <meta property="og:url" content="https://tomatobet.ru/"/>
 <meta name="twitter:url" content="https://tomatobet.ru/"/>
 <meta name="twitter:site" content="@Tomatobet"/>
