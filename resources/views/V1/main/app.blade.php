@@ -7,16 +7,18 @@
       @widget('app.widgets.v1.main_seo')
       @stack('css')
       <link rel="stylesheet" href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="{{ asset('css/custom-main.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="{{ asset('css/custom-class-main.css') }}" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       @widget('app.widgets.v1.header')
         <div class="row">
-          <div class="col-10">
+          <div class="col-md-10 col-xs-12">
             @yield('content')
           </div>
           <div class="col-2 d-none d-lg-block d-xl-block d-md-block">
-            <div class="row g-4">
+            <div class="w-100 g-4">
             @section('sidebar')
               @widget('app.widgets.v1.type_sport')
             @show
