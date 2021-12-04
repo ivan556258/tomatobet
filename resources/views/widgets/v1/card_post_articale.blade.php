@@ -14,17 +14,17 @@
             <meta itemprop="width" content="492">
             <meta itemprop="height" content="369">
         </div>
+        <div class="col-12">
+          <h1 class="display-5">{{$post->h1Text}}</h1>
+        </div>
       <div class="col-12">
         <picture>
           <source media="(max-width: 799px)" srcset="{{$post->bigPicture}}">
           <source media="(min-width: 800px)" srcset="{{$post->bigPicture}}">
-          <img src="{{$post->bigPicture}}" alt="{{$post->h1Text}}">
+          <img class="img-fluid" src="{{$post->bigPicture}}" alt="{{$post->h1Text}}">
         </picture>
         
         <hr>
-      </div>
-      <div class="col-12">
-        <h1 class="display-4">{{$post->h1Text}}</h1>
       </div>
       <div class="col-12">
         <p class="text-left text-break">{!!$post->DescText!!}</p>

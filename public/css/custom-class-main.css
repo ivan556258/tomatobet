@@ -1,0 +1,7 @@
+.link-danger {
+    color: black;
+}
+.link-danger:hover {
+    color: black;
+    text-decoration: none;
+}

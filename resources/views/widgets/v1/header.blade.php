@@ -1,5 +1,6 @@
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="row row-cols-1 row-cols-md-12 g-4">
     <div class="col">
-        <h1>Tomato bets</h1>
+        <a href="/" class="link-danger"><h3>TOMATOBET</h3></a>
+        <hr>
     </div>
 </div>
