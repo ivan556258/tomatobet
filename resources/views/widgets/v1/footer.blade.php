@@ -12,7 +12,7 @@
          <div class="col-12 mx-auto mb-4">
            <!-- Content -->
            <h6 class="text-uppercase fw-bold mb-4">
-             <i class="fas fa-gem me-3"></i>Tomatobets
+             <i class="fas fa-gem me-3"></i>Tomatobet
            </h6>
            <p>
              Блог любителей спорта с людей любящих делать ставки.
