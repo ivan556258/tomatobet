@@ -9,6 +9,7 @@
 <meta property="og:image" content="{{asset('favicon/tomato-og-logo.png')}}"/>
 <meta name="twitter:card" content="summary"/>
 <meta property="og:locale" content="ru_RU" />
+<meta name="yandex-verification" content="1ca0146a33aa70df" />
 <meta name="twitter:image" content="{{asset('favicon/tomato-og-logo.png')}}"/>
 <link rel="shortcut icon" href="{{asset('storage/file.txt')}}" >
 <link rel="shortcut icon" type="image/png" href="{{asset('favicon/apple-touch-icon-48x48.png')}}" >
