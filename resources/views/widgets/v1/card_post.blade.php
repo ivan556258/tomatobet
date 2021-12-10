@@ -6,7 +6,7 @@
       <div class="card-body">
         <h5 class="card-title">{{$post->h1Text}}</h5>
         <p class="card-text"> {!! Str::limit($post->DescText, 150, ' ...') !!}</p>
-        <a href="{{route('post', ['id' => $post->id])}}" class="btn btn-primary">Подробнее</a>
+        <a href="{{route('post', ['id' => $post->id])}}" class="btn btn-primary">@lang('words.More_details')</a>
       </div>
   </div>
 </div>
