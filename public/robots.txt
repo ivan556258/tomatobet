@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://tomatobet.ru/sitemap.xml
