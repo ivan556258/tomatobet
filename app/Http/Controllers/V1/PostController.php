@@ -13,7 +13,7 @@ class PostController extends Controller
      */
     public function posts()
     {
-        return view('V1.layouts.posts');
+        return view('V1.guest.layouts.posts');
     }
     
     /**
@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function post(int $id)
     {
-        return view('V1.layouts.post', compact('id'));
+        return view('V1.guest.layouts.post', compact('id'));
     }
     
     /**
@@ -37,6 +37,6 @@ class PostController extends Controller
      */
     public function typeSport(string $urn)
     {
-        return view('V1.layouts.posts', compact('urn'));
+        return view('V1.guest.layouts.posts', compact('urn'));
     }
 }

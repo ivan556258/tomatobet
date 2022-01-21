@@ -7,7 +7,7 @@ use App\Repository\Contracts\PostRepositoryInterface;
 use App\Repository\Contracts\TypeSportRepositoryInterface;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-class CardPost extends AbstractWidget
+final class CardPost extends AbstractWidget
 {
 
     /**
