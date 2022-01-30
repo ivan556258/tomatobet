@@ -27,7 +27,7 @@
         <hr>
       </div>
       <div class="col-12">
-        <p class="text-left text-break">{!!$post->DescText!!}</p>
+        <p class="text-left text-break">{!!$post->eDataHtml!!}</p>
 
       </div>
     <div class="col-12">

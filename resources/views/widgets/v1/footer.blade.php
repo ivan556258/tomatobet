@@ -15,8 +15,7 @@
              <i class="fas fa-gem me-3"></i>Tomatobet
            </h6>
            <p>
-             Блог любителей спорта с людей любящих делать ставки.
-             Любое использование материалов приветствуется при гиперссылке.
+            @lang('words.A_blog_of_sports_enthusiasts_with_people_who_like_to_place_bets_Any_use_of_materials_when_placing_hyperlinks_is_encouraged.')
            </p>
          </div>
          <!-- Grid column -->
@@ -31,7 +30,7 @@
 
    <!-- Copyright -->
    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-     © 2021 Copyright:
+     © {!!date('Y')!!} Copyright:
      <a class="text-reset fw-bold" href="/">Tomatobet</a>
    </div>
    <!-- Copyright -->
