@@ -63,7 +63,7 @@ final class CardPost extends AbstractWidget
         if ($this->config['urn'] != '0') {
             $this->posts = $this->typeSportRepository->getPostsByTypeSport($this->config['urn']);
         } else {
-            $this->posts = $this->postRepository->partDesc();
+            $this->posts = $this->postRepository->partDescFront();
         }
         
     }

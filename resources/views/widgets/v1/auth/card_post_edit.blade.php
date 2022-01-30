@@ -201,13 +201,17 @@
 
                 var oReq = new XMLHttpRequest();
                 oReq.open("POST", "/auth/save/post", true);
-                oReq.onload = function(oEvent) {
-                    if (oReq.status == 200) {
-                        // oOutput.innerHTML = "Uploaded!";
-                    } else {
-                        // oOutput.innerHTML = "Error " + oReq.status + " occurred when trying to upload your file.<br \/>";
-                    }
-                };
+                oReq.onreadystatechange = function() {
+                  if (oReq.readyState === 4) {
+                    document.querySelector(".bt-5-success").style.display = "block";
+                    document.getElementById("success").innerHTML = 'Пост сохранён';
+                    setTimeout(() => {
+                      document.querySelector(".bt-5-success").style.display = "none";
+                    }, 5000);
+
+                    
+                  }
+                }
                 oReq.send(oData);
             }).catch((error) => {
                 return error;

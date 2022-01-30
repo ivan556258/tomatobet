@@ -1,6 +1,19 @@
-h2, .h2 {
+h2,
+.h2 {
     font-size: 1.2rem;
 }
+
 p {
     font-size: 1.1rem;
+}
+
+.bt-5-success,
+.bt-5-error {
+    width: 35%;
+    position: fixed;
+    bottom: 90px;
+    float: right;
+    height: auto;
+    right: 5%;
+    display: none;
 }

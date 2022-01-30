@@ -17,7 +17,13 @@
   <tbody>
     @foreach($posts as $post)
     <tr>
-      <td class="border">{{$post->id}}</td>
+      <td class="border">{{$post->id}}
+      @if ($post->public == '1')
+      <span class="badge bg-success">Опубликовано</span>
+      @else
+      <span class="badge bg-danger">Не опубликовано</span>
+      @endif
+      </td>
       <td class="border" width="100"><img src="http://localhost{{Storage::url($post->bigPicture)}}" class="img-thumbnail" alt="{{$post->h1Text}}"></td>
       <td class="td-primary border"><div class="px-5">{{$post->h1Text}}</div></td>
       <td class="td-success border"><div class="px-5">{!! strip_tags(Str::limit($post->DescText, 150, ' ...')) !!}</div></td>
