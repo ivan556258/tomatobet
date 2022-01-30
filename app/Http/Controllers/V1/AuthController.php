@@ -3,14 +3,17 @@
 namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
-use App\Models\V1\Post;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use App\Services\V1\PostService;
+use Illuminate\Http\Response;
 
 class AuthController extends Controller
 {
+    public function __construct(PostService $postService)
+    {
+        $this->postService = $postService;
+    }
 
-    const PATH = 'public/images';
     /**
      * Method posts
      *
@@ -48,25 +51,10 @@ class AuthController extends Controller
      * Method save
      *
      * @param integer $id
-     * @return void
+     * @return Response
      */
-    public function save(Request $request)
+    public function save(Request $request): Response
     {
-        $imageName = null;
-        $data = $request->all();
-        if ($request->hasFile('bigPicture')) {
-            $image      = $request->file('bigPicture');
-            $imageName = time() . '.' . $image->extension();
-            Storage::putFileAs(self::PATH, $image, $imageName);
-        }
-        $data['bigPicture'] = self::PATH . '/' . $imageName;
-        if (!is_null($request['id'])) {
-            $post = Post::find($request['id']);
-            $data['public'] = (bool)$data['public'];
-            $post->update($data);
-        } else {
-            $data['public'] = (bool)$data['public'];
-            Post::create($data);
-        }
+        return response($this->postService->save($request));
     }
 }
