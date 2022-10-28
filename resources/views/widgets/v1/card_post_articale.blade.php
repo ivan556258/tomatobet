@@ -23,11 +23,11 @@
           <source media="(min-width: 800px)" srcset="{{$post->bigPicture}}">
           <img class="img-fluid" src="{{$post->bigPicture}}" alt="{{$post->h1Text}}">
         </picture>
-        
+
         <hr>
       </div>
-      <div class="col-12">
-        <p class="text-left text-break">{!!$post->eDataHtml!!}</p>
+      <div class="col-12 bg-color-post">
+        <p class="text-left text-break">{!!$post->DescText!!}</p>
 
       </div>
     <div class="col-12">

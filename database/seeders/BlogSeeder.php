@@ -16,7 +16,7 @@ class BlogSeeder extends Seeder
      */
     public function run()
     {
-        
+
             DB::table('posts')->insert([
                 'titleText' => "Бой Деррик Льюис (США) vs Кристофер Даукаус (США) ",
                 'h1Text' => "Бой Деррик Льюис (США) vs Кристофер Даукаус (США) ",
@@ -29,12 +29,14 @@ class BlogSeeder extends Seeder
 <p>На плакате не изображены 15 лучших полусредневесов Стивен Вандербой Томпсон и Белал Мухаммед которые, как ожидается, встретятся в со-главном турнире.</p>",
                 'smallPicture' => "https://sun9-87.userapi.com/impg/beV_iNTDyzEF_VG9KdT2D2RUzd6hEq1OosqLfQ/D2akXDIfKzk.jpg?size=604x377&quality=95&sign=60b2d789669fbdb3d0189110a45fb045&amp;type=album",
                 'bigPicture' => "https://sun9-87.userapi.com/impg/beV_iNTDyzEF_VG9KdT2D2RUzd6hEq1OosqLfQ/D2akXDIfKzk.jpg?size=604x377&quality=95&sign=60b2d789669fbdb3d0189110a45fb045&amp;type=album",
-                'oneHashTag' =>"MMA" , 
-                'twoHashTag' => "M-1", 
-                'threeHashTag' => "Бой в клетке", 
-                'fooHashTag' => "Деррик Льюис", 
+                'oneHashTag' =>"MMA" ,
+                'twoHashTag' => "M-1",
+                'threeHashTag' => "Бой в клетке",
+                'fooHashTag' => "Деррик Льюис",
                 'fiveHashTag' => "Кристофер Даукаус",
-                'type_sport_id' => "3"
+                'type_sport_id' => "3",
+                'user_id' => 13,
+                'public' => 1
             ]);
         }
        // DB::table('blogs')->insert($arr);

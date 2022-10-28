@@ -28,6 +28,11 @@ class Posts extends Migration
                     $table->string('threeHashTag');
                     $table->string('fooHashTag');
                     $table->string('fiveHashTag');
+                    $table->integer('user_id')->default(13)->nullable(false)->unsigned()->after('id');
+                    $table->foreign('user_id')->references('id')->on('users')->onUpdate('CASCADE')->onDelete('CASCADE');
+                    $table->text('eDataHtml')->nullable();
+                    $table->text('eDataOrigin')->nullable();
+                    $table->boolean('public')->nullable();
                     $table->timestamps();
                 });
         }

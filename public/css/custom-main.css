@@ -17,3 +17,7 @@ p {
     right: 5%;
     display: none;
 }
+.bg-color-post {
+    background-color: white;
+    padding: 10px 15px;
+}
