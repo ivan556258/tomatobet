@@ -16,7 +16,7 @@ class Posts extends Migration
         if (!Schema::hasTable('posts')) {
                 Schema::create('posts', function (Blueprint $table) {
                     $table->id();
-                    $table->string('titleText');
+                    $table->text('titleText');
                     $table->string('h1Text');
                     $table->string('keywordsText');
                     $table->string('prevText');

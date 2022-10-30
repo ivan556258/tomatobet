@@ -1,12 +1,13 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
 @foreach($posts as $post)
-<div class="col my-2">
+<div class="col-md-6 my-2">
   <div class="card">
-    <img src="{{$post->smallPicture}}" class="card-img-top" alt="{{$post->h1Text}}">
+    <img src="{{$post->bigPicture}}" class="card-img-top" alt="{{$post->h1Text}}">
       <div class="card-body">
-        <h5 class="card-title">{{$post->h1Text}}</h5>
+        <h5 class="card-title">
+            <a class="link-name" href="{{route('post', ['id' => $post->id])}}"> {{$post->h1Text}} </a>
+        </h5>
         <p class="card-text"> {!! Str::limit($post->DescText, 150, ' ...') !!}</p>
-        <a href="{{route('post', ['id' => $post->id])}}" class="btn btn-primary">@lang('words.More_details')</a>
       </div>
   </div>
 </div>

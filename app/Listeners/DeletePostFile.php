@@ -19,7 +19,6 @@ class DeletePostFile
     {
         $image = $event->post->isImage($event->id);
         if (!is_null($image)) {
-            dump($image);
             Storage::delete($image);
         }
     }

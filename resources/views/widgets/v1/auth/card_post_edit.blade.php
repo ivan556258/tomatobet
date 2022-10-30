@@ -3,11 +3,11 @@
 
             <label for="validationCustom01" class="form-label">Title поста</label>
             @if (isset($post))
-            <input type="text" class="form-control" name="titleText" id="validationCustom01" value="{{$post->titleText ?? ''}}" required>   
-            @else 
-            <input type="text" class="form-control" name="titleText" id="validationCustom01" value="" required>     
+            <input type="text" class="form-control" name="titleText" id="validationCustom01" value="{{$post->titleText ?? ''}}" required>
+            @else
+            <input type="text" class="form-control" name="titleText" id="validationCustom01" value="" required>
             @endif
-            
+
             <div class="valid-feedback">
               Looks good!
             </div>
@@ -84,7 +84,7 @@
           <div class="col-md-10 mb-3">
             <div class="parent_image">
               @if (isset($post))
-              <img width="250" src="http://localhost{{Storage::url($post->bigPicture)}}" class="border img-thumbnail">
+              <img width="250" src="{{ $post->bigPicture }}" class="border img-thumbnail">
               @endif
             </div>
           </div>
@@ -122,14 +122,14 @@
               <button type="submit" class="btn btn-primary w-100 mx-0 px-0">Сохранить</button>
           </div>
         </form>
-        
+
         <script>
-          
+
         const editor = new EditorJS({
             holder: 'editorjs',
-            /** 
-             * Available Tools list. 
-             * Pass Tool's class or Settings object for each Tool you want to use 
+            /**
+             * Available Tools list.
+             * Pass Tool's class or Settings object for each Tool you want to use
              */
             tools: {
                 header: Header,
@@ -146,8 +146,8 @@
             blocks : {!!$post->eDataOrigin!!} ,
           }
           @endif
-            
-            
+
+
         });
 
         var form = document.forms.namedItem("fileinfo");
@@ -191,7 +191,7 @@
                 oData = new FormData(form);
                 oData.append('_token', "{{csrf_token()}}");
                 oData.append('eDataHtml', convertDataToHtml(output.blocks));
-                @if (isset($post)) 
+                @if (isset($post))
                 oData.append('id', '{{$post->id  ?? ''}}');
                 @endif
 
@@ -202,14 +202,14 @@
                 var oReq = new XMLHttpRequest();
                 oReq.open("POST", "/auth/save/post", true);
                 oReq.onreadystatechange = function() {
-                  if (oReq.readyState === 4) {
+                  if (oReq.readyState === 1 || oReq.readyState === 2) {
                     document.querySelector(".bt-5-success").style.display = "block";
                     document.getElementById("success").innerHTML = 'Пост сохранён';
                     setTimeout(() => {
                       document.querySelector(".bt-5-success").style.display = "none";
                     }, 5000);
 
-                    
+
                   }
                 }
                 oReq.send(oData);
@@ -221,5 +221,5 @@
         }, false);
       </script>
       <script src="/js/image-upload.js"></script>
-        
+
 

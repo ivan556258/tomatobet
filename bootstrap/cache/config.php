@@ -4,7 +4,7 @@
     'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost',
+    'url' => 'http://localhost:8383',
     'asset_url' => NULL,
     'timezone' => 'UTC',
     'locale' => 'en',
@@ -362,7 +362,7 @@
       array (
         'driver' => 'local',
         'root' => '/var/www/storage/app/public',
-        'url' => 'http://localhost/storage',
+        'url' => 'http://localhost:8383/storage',
         'visibility' => 'public',
       ),
       's3' => 

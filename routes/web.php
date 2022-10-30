@@ -27,7 +27,7 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
-    Route::get('dashboard', [PostController::class, 'x'])->name('dashboard');
+    Route::get('dashboard', [AuthController::class, 'posts'])->name('dashboard');
 });
 
 Route::group(['middleware' => ['auth', 'verified']], function () {

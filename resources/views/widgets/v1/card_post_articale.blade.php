@@ -14,9 +14,6 @@
             <meta itemprop="width" content="492">
             <meta itemprop="height" content="369">
         </div>
-        <div class="col-12">
-          <h1 class="display-5">{{$post->h1Text}}</h1>
-        </div>
       <div class="col-12">
         <picture>
           <source media="(max-width: 799px)" srcset="{{$post->bigPicture}}">
@@ -26,8 +23,11 @@
 
         <hr>
       </div>
+        <div class="col-12">
+            <h1 class="link-name display-5">{{$post->h1Text}}</h1>
+        </div>
       <div class="col-12 bg-color-post">
-        <p class="text-left text-break">{!!$post->DescText!!}</p>
+        <p class="text-left text-break">{!!$post->eDataHtml!!}</p>
 
       </div>
     <div class="col-12">

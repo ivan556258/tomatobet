@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace App\Services\V1;
 
 use Illuminate\Support\Facades\Storage;
@@ -10,7 +10,7 @@ use App\Events\PostService as PostServiceFileDelete;
 class PostService
 {
     const PATH = 'public/images';
-    
+
     /**
      * BaseRepository constructor.
      *
@@ -21,7 +21,7 @@ class PostService
         $this->postRepository = $postRepository;
     }
 
-        
+
     /**
      * Method save
      *
@@ -40,14 +40,15 @@ class PostService
             $imageName = time() . '.' . $image->extension();
             Storage::putFileAs(self::PATH, $image, $imageName);
         }
-        $data['bigPicture'] = self::PATH . '/' . $imageName;
+        $data['bigPicture'] = Storage::url(self::PATH . '/' . $imageName);
+        $data['prevText'] = preg_replace('#<[^>]+>#', ' ', $request['eDataHtml']);
+        $data['public'] = (bool)$data['public'];
+        $data['smallPicture'] = null;
         if (!is_null($request['id'])) {
-            $data['public'] = (bool)$data['public'];
             event(new PostServiceFileDelete($request['id'], $this->postRepository));
             $this->postRepository->update($request['id'], $data);
             $status = 2;
         } else {
-            $data['public'] = (bool)$data['public'];
             $this->postRepository->create($data);
             $status = 1;
         }

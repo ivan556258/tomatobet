@@ -24,7 +24,7 @@
       <span class="badge bg-danger">Не опубликовано</span>
       @endif
       </td>
-      <td class="border" width="100"><img src="http://localhost{{Storage::url($post->bigPicture)}}" class="img-thumbnail" alt="{{$post->h1Text}}"></td>
+      <td class="border" width="100"><img src="{{ $post->bigPicture }}" class="img-thumbnail" alt="{{$post->h1Text}}"></td>
       <td class="td-primary border"><div class="px-5">{{$post->h1Text}}</div></td>
       <td class="td-success border"><div class="px-5">{!! strip_tags(Str::limit($post->DescText, 150, ' ...')) !!}</div></td>
       <td class="border">
