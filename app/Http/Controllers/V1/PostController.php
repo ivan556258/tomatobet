@@ -1,41 +1,39 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\View\View;
 
+/**
+ * Class PostController
+ * @package App\Http\Controllers\V1
+ */
 class PostController extends Controller
-{   
+{
     /**
-     * Method posts
-     *
-     * @return void
+     * @return View
      */
-    public function posts()
+    public function posts(): View
     {
         return view('V1.guest.layouts.posts');
     }
-    
+
     /**
-     * Method post
-     *
-     * @param int $id [explicite description]
-     *
-     * @return void
+     * @param int $id
+     * @return View
      */
-    public function post(int $id)
+    public function post(int $id): View
     {
         return view('V1.guest.layouts.post', compact('id'));
     }
-    
+
     /**
-     * Method typeSport
-     *
-     * @param string $urn [explicite description]
-     *
-     * @return void
+     * @param string $urn
+     * @return View
      */
-    public function typeSport(string $urn)
+    public function typeSport(string $urn): View
     {
         return view('V1.guest.layouts.posts', compact('urn'));
     }

@@ -1,56 +1,61 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use App\Services\V1\PostService;
 use Illuminate\Http\Response;
 
+/**
+ * Class PostController
+ * @package App\Http\Controllers\V1
+ */
 class AuthController extends Controller
 {
+    /**
+     * @var PostService
+     */
+    private $postService;
+
+    /**
+     * @param PostService $postService
+     */
     public function __construct(PostService $postService)
     {
         $this->postService = $postService;
     }
 
     /**
-     * Method posts
-     *
-     * @return void
+     * @return View
      */
-    public function posts()
+    public function posts(): View
     {
         return view('V1.auth.layouts.posts');
     }
 
 
     /**
-     * Method edit
-     *
-     * @param int $id int
-     *
-     * @return void
+     * @param int $id
+     * @return View
      */
-    public function edit(int $id)
+    public function edit(int $id): View
     {
         return view('V1.auth.layouts.post', compact('id'));
     }
 
     /**
-     * Method add
-     *
-     * @return void
+     * @return View
      */
-    public function add()
+    public function add(): View
     {
         return view('V1.auth.layouts.add');
     }
 
     /**
-     * Method save
-     *
-     * @param integer $id
+     * @param Request $request
      * @return Response
      */
     public function save(Request $request): Response

@@ -1,16 +1,25 @@
 <?php
+declare(strict_types=1);
+
 namespace App\Http\Middleware;
 
 use Illuminate\Support\Facades\App;
 use Closure;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
+/**
+ * Class Localization
+ * @package App\Http\Middleware
+ */
 class Localization
 {
     /**
-     * Handle an incoming request.
-     * @param \Illuminate\Http\Request $request
-     * @param \Closure $next
+     * @param $request
+     * @param Closure $next
      * @return mixed
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
      */
     public function handle($request, Closure $next)
     {

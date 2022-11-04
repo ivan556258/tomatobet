@@ -1,21 +1,27 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Http\Middleware;
 
 use App\Providers\RouteServiceProvider;
 use Closure;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * Class RedirectIfAuthenticated
+ * @package App\Http\Middleware
+ */
 class RedirectIfAuthenticated
 {
     /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @param  string|null  ...$guards
-     * @return mixed
+     * @param Request $request
+     * @param Closure $next
+     * @param ...$guards
+     * @return Application|RedirectResponse|Redirector|mixed
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
