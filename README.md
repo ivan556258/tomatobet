@@ -18,8 +18,8 @@ next create db and user's with grant privileges and add roles
 
 create database tomato;
 create user tomato with encrypted password '1234';
-GRANT ALL PRIVILEGES ON DATABASE "tomato" to tomato;
-ALTER ROLE tomato CREATEROLE CREATEDB SUPERUSER BYPASSRLS REPLICATION;
+`GRANT ALL PRIVILEGES ON DATABASE "tomato" to tomato;`
+`ALTER ROLE tomato CREATEROLE CREATEDB SUPERUSER BYPASSRLS REPLICATION;`
 
 ---------------------------------------------------------------
 git clone
