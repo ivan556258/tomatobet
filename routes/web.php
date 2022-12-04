@@ -2,7 +2,6 @@
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\V1\PostController;
 use App\Http\Controllers\V1\AuthController;
 use Inertia\Inertia;
 
@@ -48,11 +47,3 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/auth/save/post', [AuthController::class, 'save'])
         ->name('auth.save.post');
 });
-
-
-
-
-
-Route::get('/', [PostController::class, 'posts'])->name('posts');
-Route::get('/post/{id}', [PostController::class, 'post'])->where('id', '[0-9]+')->name('post');
-Route::get('/typeSport/{urn}', [PostController::class, 'typeSport'])->name('typeSport');
