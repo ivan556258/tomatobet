@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Modules\Post\Http\Controllers\V1;
 
-use JetBrains\PhpStorm\NoReturn;
 use Modules\Post\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -32,9 +31,8 @@ class AuthController extends Controller
     /**
      * @return View
      */
-    #[NoReturn] public function posts(): View
+    public function posts(): View
     {
-        dd(5454);
         return view('V1.auth.layouts.posts');
     }
 

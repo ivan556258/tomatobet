@@ -12,6 +12,11 @@ class PostService
     const PATH = 'public/images';
 
     /**
+     * @var PostRepository
+     */
+    private PostRepository $postRepository;
+
+    /**
      * BaseRepository constructor.
      *
      * @param PostRepository $postRepository

@@ -5,6 +5,7 @@ return [
     'hokey' => 'Хокей',
     'mma' => 'MMA',
     'tenis' => 'Теннис',
+    'ny' => 'N.Y',
     'cybersport' => 'Киберспорт',
     'More_details' => 'Подробнее',
     'A_blog_of_sports_enthusiasts_with_people_who_like_to_place_bets_Any_use_of_materials_when_placing_hyperlinks_is_encouraged.' => 'Блог любителей спорта с людей любящих делать ставки.

@@ -6,7 +6,7 @@ namespace App\Http\Controllers\V1;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
-use App\Services\V1\PostService;
+use Modules\Post\Services\V1\PostService;
 use Illuminate\Http\Response;
 
 /**
@@ -18,7 +18,7 @@ class AuthController extends Controller
     /**
      * @var PostService
      */
-    private $postService;
+    private PostService $postService;
 
     /**
      * @param PostService $postService

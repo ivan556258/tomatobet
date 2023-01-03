@@ -12,7 +12,7 @@
          <div class="col-12 mx-auto mb-4">
            <!-- Content -->
            <h6 class="text-uppercase fw-bold mb-4">
-             <i class="fas fa-gem me-3"></i>Tomatobet
+             <i class="fas fa-gem me-3"></i>So-so NEWS
            </h6>
            <p>
             @lang('words.A_blog_of_sports_enthusiasts_with_people_who_like_to_place_bets_Any_use_of_materials_when_placing_hyperlinks_is_encouraged.')
@@ -20,7 +20,7 @@
          </div>
          <!-- Grid column -->
 
-     
+
 
        </div>
        <!-- Grid row -->
@@ -31,7 +31,7 @@
    <!-- Copyright -->
    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
      © {!!date('Y')!!} Copyright:
-     <a class="text-reset fw-bold" href="/">Tomatobet</a>
+     <a class="text-reset fw-bold" href="/">So-so NEWS</a>
    </div>
    <!-- Copyright -->
  </footer>
