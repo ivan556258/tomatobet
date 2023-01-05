@@ -5,6 +5,7 @@ namespace Modules\Menu\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Menu\Http\Requests\MenuRequests;
 
 class MenuController extends Controller
 {
@@ -27,10 +28,10 @@ class MenuController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param MenuRequests $request
      * @return void
      */
-    public function store(Request $request)
+    public function store(MenuRequests $request)
     {
         dd(5454);
     }

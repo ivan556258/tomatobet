@@ -15,7 +15,7 @@
 {{--                        @if (isset($post))--}}
 {{--                            <input type="text" class="form-control" name="keywordsText" id="validationCustom01" value="{{$post->keywordsText ?? ''}}" required>--}}
 {{--                        @else--}}
-                            <input type="text" class="form-control" name="keywordsText" id="validationCustom01" value="" required>
+                            <input type="text" class="form-control" name="nameMenu" id="validationCustom01" value="" required>
 {{--                        @endif--}}
                         <div class="valid-feedback">
                             Looks good!
@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-10 mb-3">
                         <label for="validationCustom01" class="form-label">Shot code menu</label>
-                        <input type="text" class="form-control" name="keywordsText" id="validationCustom01" value="" required>
+                        <input type="text" class="form-control" name="shortCodeMenu" id="validationCustom01" value="" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
